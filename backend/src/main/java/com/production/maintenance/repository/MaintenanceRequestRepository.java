@@ -1,0 +1,1 @@
+package com.production.maintenance.repository; import com.production.maintenance.model.MaintenanceRequest; import org.springframework.data.jpa.repository.JpaRepository; public interface MaintenanceRequestRepository extends JpaRepository<MaintenanceRequest,Long>{long countByStatusIgnoreCase(String status);}

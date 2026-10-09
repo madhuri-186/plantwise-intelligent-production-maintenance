@@ -1,0 +1,1 @@
+package com.production.maintenance.repository; import com.production.maintenance.model.Breakdown; import org.springframework.data.jpa.repository.JpaRepository; public interface BreakdownRepository extends JpaRepository<Breakdown,Long>{long countByStatusIgnoreCase(String status);}

@@ -1,0 +1,3 @@
+package com.production.maintenance.controller;
+import org.springframework.web.bind.annotation.*; import java.util.Map;
+@RestController @RequestMapping("/api/auth") public class AuthController { @PostMapping("/login") public Map<String,Object> login(@RequestBody Map<String,String> body){String email=body.getOrDefault("email","").trim();String password=body.getOrDefault("password","");if(!"admin@plant.com".equalsIgnoreCase(email)||!"admin123".equals(password))throw new org.springframework.web.server.ResponseStatusException(org.springframework.http.HttpStatus.UNAUTHORIZED,"Invalid email or password");return Map.of("success",true,"email",email,"role","ADMIN","message","Development demo login only; configure database-backed JWT authentication before deployment.");} }

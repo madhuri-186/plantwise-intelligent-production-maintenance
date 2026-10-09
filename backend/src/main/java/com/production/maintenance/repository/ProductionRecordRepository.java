@@ -1,0 +1,1 @@
+package com.production.maintenance.repository; import com.production.maintenance.model.ProductionRecord; import org.springframework.data.jpa.repository.JpaRepository; import java.time.LocalDate; import java.util.List; public interface ProductionRecordRepository extends JpaRepository<ProductionRecord,Long>{List<ProductionRecord> findByProductionDate(LocalDate date);}
